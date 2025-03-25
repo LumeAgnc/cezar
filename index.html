@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cezar Grooming Studio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    <!-- Background Texture -->
+    <div class="background-texture"></div>
+
+    <!-- Header & Navigation -->
+    <header id="header">
+        <a href="index.html" class="logo">
+            <img src="res/CEZAR_WBG.png" alt="Cezar Studio Logo"> 
+            Ce<span>zar studio</span>
+        </a>
+        <div class="hamburger" id="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="#home" class="active">Početna</a></li>
+                <li><a href="#about">O nama</a></li>
+                <li><a href="#education">Edukacija</a></li>
+                <li><a href="#gallery">Galerija</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content - Home Page -->
+    <div id="home-page">
+        <!-- Home Section -->
+        <section id="home">
+            <div class="home-content">
+                <h1>Profesionalno njega pasa, s ljubavlju</h1>
+                <p>Vjerujemo da svaki pas zaslužuje izgledati i osjećati se apsolutno najbolje. U Cezaru kombiniramo stručne tehnike njegovanja s iskrenom ljubavlju i brigom za vaše krznene prijatelje.</p>
+                <a href="#contact" class="btn">Zakažite termin</a>
+            </div>
+            <div class="home-image">
+                <img src="slike/hero-dog.png" alt="Dog being groomed">
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="fade-in">
+            <div class="section-title">
+                <h2>O nama</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="slike/groomers.jpg" alt="Our team">
+                </div>
+                <div class="about-content">
+                    <p>Cezar Grooming Studio osnovali su strastveni ljubitelji pasa s više od 15 godina profesionalnog iskustva u njegovanju. Smatramo da je svaki pas jedinstven, zbog čega nudimo personalizirane usluge šišanja prilagođene specifičnim potrebama vašeg ljubimca.</p>                    <div class="about-feature">
+                        <i class="fas fa-paw"></i>
+                        <div>
+                            <h3>Certifikovani njegovatelji</h3>
+                            <p>Naš tim čine certifikovani stručnjaci koji redovno usavršavaju svoje vještine i znanja.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-heart"></i>
+                        <div>
+                            <h3>Stress-Free okruženje</h3>
+                            <p>Stvaramo mirnu i ugodnu atmosferu kako bismo osigurali da vaš pas uživa u šišanju.</p>
+                        </div>
+                    </div>
+                    <div class="about-feature">
+                        <i class="fas fa-medal"></i>
+                        <div>
+                            <h3>Premium produkti</h3>
+                            <p>Koristimo samo visokokvalitetne proizvode sigurne za kućne ljubimce koji su nježni prema koži i dlaci vašeg psa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education" class="fade-in">
+            <div class="section-title">
+                <h2>Edukacija</h2>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-bath"></i>
+                    </div>
+                    <h3>Osnove kupanja</h3>
+                    <p>Naučite ispravne tehnike kupanja vašeg psa kod kuće. Otkrijte prave šampone za različite vrste krzna i uobičajene pogreške koje treba izbjegavati.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>Savjeti za češljanje</h3>
+                    <p>Redovno četkanje ključno je za održavanje zdrave dlake. Pokazat ćemo vam prave četke za specifičnu vrstu dlake vašeg psa i kako to učiniti ugodnim iskustvom za njih.</p>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-paw"></i>
+                    </div>
+                    <h3>Njega šapica</h3>
+                    <p>Pravilno održavanje noktiju ključno je za udobnost i pokretljivost vašeg psa. Naučite kako sigurno podrezati nokte svom psu i prepoznati znakove da mu je potrebna stručna pomoć.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="fade-in">
+            <div class="section-title">
+                <h2>Galerija</h2>
+            </div>
+            <div class="gallery-preview">
+                <div class="gallery-item">
+                    <img src="slike/D4276A46-0548-4747-BF13-50A275E77759.JPG" alt="Gallery image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="slike/ED4235A5-A932-45A4-AA6E-0C11E4E99485.JPG" alt="Gallery image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="slike/1B40A33B-9A92-477B-8D01-91C30BC03A2E.JPG" alt="Gallery image 3">
+                </div>
+            </div>
+            <div class="gallery-cta">
+                <a href="#" class="btn" id="view-gallery">Pogledaj još</a>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="fade-in">
+            <div class="section-title">
+                <h2>Kontaktiraj nas</h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ime</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email adresa</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Poruka</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Pošalji</button>
+                    </form>
+                </div>
+                <div class="contact-info">
+                    <div class="info-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <h3>Broj telefona</h3>
+                            <p>(123) 456-7890</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email adresa</h3>
+                            <p>info@pawfectgrooming.com</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Naša lokacija</h3>
+                            <p>123 Pawsome Street, Dogtown, DG 12345</p>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <!-- Placeholder for Google Maps -->
+                        <iframe 
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.0782455200245!2d15.63902467610484!3d46.54463767108156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f769c7641e9e7%3A0x702aa04f403fd57c!2sTr%C5%BEa%C5%A1ka%20cesta%2013%2C%202000%20Maribor%2C%20Slovenia!5e0!3m2!1sen!2sus!4v1710240000000!5m2!1sen!2sus" 
+						width="100%" 
+						height="400" 
+						style="border:0;" 
+						allowfullscreen="" 
+						loading="lazy">
+					</iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-logo">Ce<span>zar</span></div>
+            <p>Neka vaši krzneni prijatelji izgledaju i osjećaju se najbolje što mogu.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p>&copy; 2025 Cezar Grooming Studio. All Rights Reserved.</p>
+        </footer>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery-page" style="display: none;">
+        <div class="gallery-page">
+            <div class="section-title">
+                <h2>Galerija</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="slike/ED4235A5-A932-45A4-AA6E-0C11E4E99485.JPG" alt="Gallery image 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="slike/EA5A3603-AD5C-483E-A20A-91DF25427452.JPG" alt="Gallery image 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="slike/D4276A46-0548-4747-BF13-50A275E77759.JPG" alt="Gallery image 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="slike/54C05103-2C16-4B41-8F7A-3F1A38A6B5C7.JPG" alt="Gallery image 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="slike/2D094638-C156-43E6-800E-E2D5E95E7628.JPG" alt="Gallery image 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="slike/1B40A33B-9A92-477B-8D01-91C30BC03A2E.JPG" alt="Gallery image 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="slike/01B2CFD4-F4B8-4B39-BC3B-A5ABECA14982.JPG" alt="Gallery image 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="slike/01B2CFD4-F4B8-4B39-BC3B-A5ABECA14982 (1).JPG" alt="Gallery image 8">
+                </div>
+            </div>
+        </div>
+        <a href="#" class="back-to-home" id="back-to-home">
+            <i class="fas fa-home"></i>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // DOM Elements
+        const header = document.getElementById('header');
+        const hamburger = document.getElementById('hamburger');
+        const nav = document.getElementById('nav');
+        const navLinks = document.querySelectorAll('nav ul li a');
+        const sections = document.querySelectorAll('section');
+        const fadeElements = document.querySelectorAll('.fade-in');
+        const viewGalleryBtn = document.getElementById('view-gallery');
+        const backToHomeBtn = document.getElementById('back-to-home');
+        const homePage = document.getElementById('home-page');
+        const galleryPage = document.getElementById('gallery-page');
+        const contactForm = document.getElementById('contactForm');
+
+        // Sticky Header
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+
+            // Active Nav Link
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Scroll Animations
+            fadeElements.forEach(element => {
+                const elementTop = element.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    element.classList.add('active');
+                }
+            });
+        });
+
+        // Mobile Navigation
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+
+        // Gallery Page Toggle
+        viewGalleryBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            homePage.style.display = 'none';
+            galleryPage.style.display = 'block';
+            window.scrollTo(0, 0);
+        });
+
+        backToHomeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            galleryPage.style.display = 'none';
+            homePage.style.display = 'block';
+            window.scrollTo(0, 0);
+        });
+
+        // Contact Form
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will get back to you soon.');
+            contactForm.reset();
+        });
+
+        // Initialize
+        window.addEventListener('load', () => {
+            // Trigger scroll event to set active nav
+            window.dispatchEvent(new Event('scroll'));
+        });
+    </script>
+</body>
+</html>
