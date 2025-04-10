@@ -134,6 +134,11 @@ a {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-style: normal;
+    text-transform: initial;
+    letter-spacing: 0px;
 }
 
 .header-scrolled {
@@ -208,7 +213,7 @@ nav ul li a.active::after {
 
 .home-image {
     position: absolute;
-    transform: scale(0.5);
+    transform: scale(5);
     max-width: 100px;
     height: auto;
     right: 35%;

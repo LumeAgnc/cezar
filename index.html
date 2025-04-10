@@ -15,7 +15,7 @@
     <!-- Header & Navigation -->
     <header id="header">
         <a href="index.html" class="logo">
-            <img src="res/CEZAR_WBG.png" alt="Cezar Studio Logo"> 
+            <img src="res/Cezar.png" alt="Cezar Studio Logo"> 
             Ce<span>zar studio</span>
         </a>
         <div class="hamburger" id="hamburger">
@@ -37,12 +37,12 @@
         <!-- Home Section -->
         <section id="home">
             <div class="home-content">
-                <h1>Profesionalno njega pasa, s ljubavlju</h1>
+                <h1>Profesionalna njega pasa, s ljubavlju</h1>
                 <p>Vjerujemo da svaki pas zaslužuje izgledati i osjećati se apsolutno najbolje. U Cezaru kombiniramo stručne tehnike njegovanja s iskrenom ljubavlju i brigom za vaše krznene prijatelje.</p>
                 <a href="#contact" class="btn">Zakažite termin</a>
             </div>
             <div class="home-image">
-                <img src="slike/hero-dog.png" alt="Dog being groomed">
+                <img src="slike/landing-dog2.png" alt="Dog being groomed">
             </div>
         </section>
 
@@ -212,32 +212,40 @@
             <div class="section-title">
                 <h2>Galerija</h2>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="slike/ED4235A5-A932-45A4-AA6E-0C11E4E99485.JPG" alt="Gallery image 1">
-                </div>
-                <div class="gallery-item">
-                    <img src="slike/EA5A3603-AD5C-483E-A20A-91DF25427452.JPG" alt="Gallery image 2">
-                </div>
-                <div class="gallery-item">
-                    <img src="slike/D4276A46-0548-4747-BF13-50A275E77759.JPG" alt="Gallery image 3">
-                </div>
-                <div class="gallery-item">
-                    <img src="slike/54C05103-2C16-4B41-8F7A-3F1A38A6B5C7.JPG" alt="Gallery image 4">
-                </div>
-                <div class="gallery-item">
-                    <img src="slike/2D094638-C156-43E6-800E-E2D5E95E7628.JPG" alt="Gallery image 5">
-                </div>
-                <div class="gallery-item">
-                    <img src="slike/1B40A33B-9A92-477B-8D01-91C30BC03A2E.JPG" alt="Gallery image 6">
-                </div>
-                <div class="gallery-item">
-                    <img src="slike/01B2CFD4-F4B8-4B39-BC3B-A5ABECA14982.JPG" alt="Gallery image 7">
-                </div>
-                <div class="gallery-item">
-                    <img src="slike/01B2CFD4-F4B8-4B39-BC3B-A5ABECA14982 (1).JPG" alt="Gallery image 8">
-                </div>
-            </div>
+            <div class="gallery-grid" id="galleryContainer"></div>
+
+<script>
+  const images = [
+    "ED4235A5-A932-45A4-AA6E-0C11E4E99485.JPG",
+    "EA5A3603-AD5C-483E-A20A-91DF25427452.JPG",
+    "D4276A46-0548-4747-BF13-50A275E77759.JPG",
+    "54C05103-2C16-4B41-8F7A-3F1A38A6B5C7.JPG",
+    "2D094638-C156-43E6-800E-E2D5E95E7628.JPG",
+    "1B40A33B-9A92-477B-8D01-91C30BC03A2E.JPG",
+    "01B2CFD4-F4B8-4B39-BC3B-A5ABECA14982.JPG",
+    "new1.jpeg",
+    "new2.jpeg",
+    "new3.jpeg",
+    "new4.jpeg",
+    "new5.jpeg",
+    "new6.jpeg"
+  ];
+
+  const galleryContainer = document.getElementById("galleryContainer");
+
+  images.forEach((fileName, index) => {
+    const div = document.createElement("div");
+    div.className = "gallery-item";
+
+    const img = document.createElement("img");
+    img.src = `slike/${fileName}`;
+    img.alt = `Gallery image ${index + 1}`;
+
+    div.appendChild(img);
+    galleryContainer.appendChild(div);
+  });
+</script>
+
         </div>
         <a href="#" class="back-to-home" id="back-to-home">
             <i class="fas fa-home"></i>
