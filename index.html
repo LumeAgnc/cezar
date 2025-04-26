@@ -6,10 +6,45 @@
     <title>Cezar Grooming Studio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
+    <link rel="icon" type="image/png" href="res/cezar.png">
 </head>
+<script>
+    window.addEventListener('scroll', function() {
+        const header = document.getElementById('header');
+        if (window.scrollY > 100) {
+            header.classList.add('header-scrolled');
+        } else {
+            header.classList.remove('header-scrolled');
+        }
+    });
+
+    document.querySelectorAll('nav a').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href');
+            const targetSection = document.querySelector(targetId);
+
+            window.scrollTo({
+                top: targetSection.offsetTop - 80,
+                behavior: 'smooth'
+            });
+
+            // Close the mobile menu when clicking a link
+            document.getElementById('nav-ul').classList.remove('active');
+
+            // Update active link
+            document.querySelectorAll('nav a').forEach(link => {
+                link.classList.remove('active');
+            });
+            this.classList.add('active');
+        });
+    });
+
+    document.getElementById('hamburger').addEventListener('click', function() {
+        document.getElementById('nav-ul').classList.toggle('active');
+    });
+</script>
 <body>
-    <!-- Background Texture -->
     <div class="background-texture"></div>
 
     <!-- Header & Navigation -->
@@ -21,7 +56,7 @@
             <i class="fas fa-bars"></i>
         </div>
         <nav id="nav">
-            <ul>
+            <ul id="nav-ul">
                 <li><a href="#home" class="active">Početna</a></li>
                 <li><a href="#about">O nama</a></li>
                 <li><a href="#education">Edukacija</a></li>
@@ -30,18 +65,23 @@
             </ul>
         </nav>
     </header>
-
+    
     <!-- Main Content - Home Page -->
     <div id="home-page">
         <!-- Home Section -->
-        <section id="home">
-            <div class="home-content">
-                <h1>Profesionalno njega pasa, s ljubavlju</h1>
-                <p>Vjerujemo da svaki pas zaslužuje izgledati i osjećati se apsolutno najbolje. U Cezaru kombiniramo stručne tehnike njegovanja s iskrenom ljubavlju i brigom za vaše krznene prijatelje.</p>
-                <a href="#contact" class="btn">Zakažite termin</a>
+        <section id="home" class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="home-content">
+                    <h1>Ljubav koju vaš pas zaslužuje</h1>
+                    <p>Nudimo razne prirodne tretmane koji će pomoći da vaš pas izgleda, miriše i oseća se odlično. Kombinujemo stručne tehnike negovanja sa iskrenom brigom i ljubavlju, koju vaš krzneni ljubimac zaslužuje. </p>
+                    <a href="#contact" class="btn">Kontaktirajte nas</a>
+                </div>
             </div>
-            <div class="home-image">
-                <img src="slike/hero-dog.png" alt="Dog being groomed">
+            <div class="scroll-down">
+                <a href="#about">
+                    <i class="fas fa-chevron-down"></i>
+                </a>
             </div>
         </section>
 
@@ -49,19 +89,18 @@
         <section id="about" class="fade-in">
             <div class="section-title">
                 <h2>O nama</h2>
-                <p class="section-subtitle">Profesionalna njega pasa s više od 15 godina iskustva</p>
             </div>
             <div class="about-container">
                 <div class="about-image">
                     <img src="slike/D4276A46-0548-4747-BF13-50A275E77759.JPG" alt="Our team">
                     <div class="experience-badge">
-                        <span>15+</span>
+                        <span>10+</span>
                         <p>Godina iskustva</p>
                     </div>
                 </div>
                 <div class="about-content">
                     <div class="about-text">
-                        <p>Cezar Grooming Studio osnovali su strastveni ljubitelji pasa s više od 15 godina profesionalnog iskustva u njegovanju. Smatramo da je svaki pas jedinstven, zbog čega nudimo personalizirane usluge šišanja prilagođene specifičnim potrebama vašeg ljubimca.</p>
+                        <p>Cezar Grooming Studio osnovali su strastveni ljubitelji pasa s više od 10 godina profesionalnog iskustva u njegovanju. Smatramo da je svaki pas jedinstven, zbog čega nudimo personalizirane usluge šišanja prilagođene specifičnim potrebama vašeg ljubimca.</p>
                     </div>
                     <div class="features-grid">
                         <div class="feature-card">
@@ -84,6 +123,13 @@
                             </div>
                             <h3>Premium produkti</h3>
                             <p>Koristimo samo visokokvalitetne proizvode sigurne za kućne ljubimce koji su nježni prema koži i dlaci vašeg psa.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-cut"></i>
+                            </div>
+                            <h3>Individualni pristup</h3>
+                            <p>Svakom psu pristupamo individualno, uzimajući u obzir rasu, starost, temperament i specifične potrebe njegovog krzna.</p>
                         </div>
                     </div>
                 </div>
@@ -127,7 +173,7 @@
             </div>
             <div class="gallery-preview">
                 <div class="gallery-item">
-                    <img src="slike/D4276A46-0548-4747-BF13-50A275E77759.JPG" alt="Gallery image 1">
+                    <img src="slike/new6.jpeg" alt="Gallery image 1">
                 </div>
                 <div class="gallery-item">
                     <img src="slike/ED4235A5-A932-45A4-AA6E-0C11E4E99485.JPG" alt="Gallery image 2">
@@ -144,7 +190,7 @@
         <!-- Contact Section -->
         <section id="contact" class="fade-in">
             <div class="section-title">
-                <h2>Kontaktiraj nas</h2>
+                <h2>Kontaktirajte nas</h2>
             </div>
             <div class="contact-grid">
                 <div class="contact-info">
@@ -172,7 +218,7 @@
                 </div>
                 <div class="map-container">
                     <iframe 
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.0782455200245!2d15.63902467610484!3d46.54463767108156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476f769c7641e9e7%3A0x702aa04f403fd57c!2sTr%C5%BEa%C5%A1ka%20cesta%2013%2C%202000%20Maribor%2C%20Slovenia!5e0!3m2!1sen!2sus!4v1710240000000!5m2!1sen!2sus" 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2764.0751870703177!2d21.9374869!3d42.9953074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475582b48f274965%3A0x9f6582e45599c08c!2sRade+Koncara+52%2C+Leskovac%2C+Serbia!5e0!3m2!1sen!2sus!4v1710240000000!5m2!1sen!2sus" 
                         width="100%" 
                         height="400" 
                         style="border:0;" 
@@ -188,12 +234,9 @@
             <div class="footer-logo">Ce<span>zar</span></div>
             <p>Neka vaši krzneni prijatelji izgledaju i osjećaju se najbolje što mogu.</p>
             <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="https://www.instagram.com/cezar_grooming/"><i class="fab fa-instagram"></i></a>
             </div>
-            <p>&copy; 2025 Cezar Grooming Studio. All Rights Reserved.</p>
+            <p>&copy; 2025 Lume Agency. All Rights Reserved.</p>
         </footer>
     </div>
 
@@ -209,14 +252,13 @@
   const images = [
     "ED4235A5-A932-45A4-AA6E-0C11E4E99485.JPG",
     "EA5A3603-AD5C-483E-A20A-91DF25427452.JPG",
-    "D4276A46-0548-4747-BF13-50A275E77759.JPG",
     "54C05103-2C16-4B41-8F7A-3F1A38A6B5C7.JPG",
     "2D094638-C156-43E6-800E-E2D5E95E7628.JPG",
     "1B40A33B-9A92-477B-8D01-91C30BC03A2E.JPG",
+    "new3.jpeg",
     "01B2CFD4-F4B8-4B39-BC3B-A5ABECA14982.JPG",
     "new1.jpeg",
     "new2.jpeg",
-    "new3.jpeg",
     "new4.jpeg",
     "new5.jpeg",
     "new6.jpeg"
