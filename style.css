@@ -1,4 +1,3 @@
-
 /* === BASE STYLES === */
 :root {
     --primary-color: #f5f2ed;
@@ -229,46 +228,121 @@ nav ul li a.active::after {
     overflow: hidden;
 }
 
-.about-grid {
+.about-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 30px;
-    align-items: center;
+    gap: 4rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .about-image {
     position: relative;
-    height: 450px;
+    border-radius: 20px;
     overflow: hidden;
-    border-radius: 10px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
-.about-image::before {
-    content: '';
-    position: absolute;
+.about-image img {
     width: 100%;
     height: 100%;
-    background-color: var(--accent-color);
-    opacity: 0.2;
-    z-index: 1;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-image:hover img {
+    transform: scale(1.05);
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--accent-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.experience-badge span {
+    font-size: 2.5rem;
+    font-weight: 700;
+    display: block;
+    line-height: 1;
+}
+
+.experience-badge p {
+    margin: 0.5rem 0 0;
+    font-size: 0.9rem;
+    opacity: 0.9;
 }
 
 .about-content {
-    padding-right: 10px;
-}
-
-.about-feature {
     display: flex;
-    align-items: flex-start;
-    margin-bottom: 25px;
+    flex-direction: column;
+    gap: 3rem;
 }
 
-.about-feature i {
-    color: var(--accent-color);
+.about-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--dark-text);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--accent-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+}
+
+.feature-icon i {
     font-size: 1.5rem;
-    margin-right: 5px;
-    padding-top: 5px;
+    color: white;
+}
+
+.feature-card h3 {
+    color: var(--dark-text);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.feature-card p {
+    color: var(--light-text);
+    line-height: 1.6;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--light-text);
+    font-size: 1.1rem;
+    margin-top: 1rem;
 }
 
 /* === EDUCATION SECTION === */
@@ -350,7 +424,8 @@ nav ul li a.active::after {
 .contact-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 2rem;
+    padding: 2rem;
 }
 
 .contact-form {
@@ -393,26 +468,30 @@ textarea.form-control {
 .contact-info {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    gap: 1.5rem;
 }
 
 .info-item {
     display: flex;
     align-items: flex-start;
-    margin-bottom: 25px;
+    gap: 1rem;
 }
 
 .info-item i {
-    color: var(--accent-color);
     font-size: 1.5rem;
-    margin-right: 15px;
+    color: var(--primary-color);
 }
 
 .map-container {
-    margin-top: 30px;
-    height: 250px;
-    border-radius: 10px;
-    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
 }
 
 /* === FOOTER === */
@@ -459,36 +538,70 @@ footer {
 
 /* === GALLERY PAGE === */
 .gallery-page {
+    padding: 2rem;
+    position: relative;
     min-height: 100vh;
-    padding: 120px 10% 60px;
+}
+
+#gallery-page {
+    display: none;
+    position: relative;
+    min-height: 100vh;
+    padding-top: 80px;
 }
 
 .gallery-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
+    gap: 1.5rem;
+    padding: 2rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1;
 }
 
 .back-to-home {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
+    bottom: 2rem;
+    right: 2rem;
     background-color: var(--accent-color);
     color: white;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    z-index: 100;
+    text-decoration: none;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    cursor: pointer;
 }
 
 .back-to-home:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1.1);
+    background-color: var(--dark-text);
+}
+
+.back-to-home i {
+    font-size: 1.5rem;
 }
 
 /* === ANIMATIONS === */
@@ -548,8 +661,14 @@ footer {
         bottom: 40px;
     }
 
-    .about-grid, .contact-grid {
+    .about-container {
         grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .about-image {
+        max-width: 600px;
+        margin: 0 auto;
     }
 }
 
@@ -597,4 +716,39 @@ footer {
     .gallery-preview {
         grid-template-columns: 1fr;
     }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90vh;
+    object-fit: contain;
+}
+
+.close-modal {
+    position: absolute;
+    right: 25px;
+    top: 10px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
 }
