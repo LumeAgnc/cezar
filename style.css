@@ -448,6 +448,41 @@ a {
     opacity: 0.9;
 }
 
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .experience-badge {
+        padding: 1rem;
+        bottom: 1.5rem;
+        right: 1.5rem;
+    }
+    
+    .experience-badge span {
+        font-size: 2rem;
+    }
+    
+    .experience-badge p {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .experience-badge {
+        padding: 0.75rem;
+        bottom: 1rem;
+        right: 1rem;
+        border-radius: 10px;
+    }
+    
+    .experience-badge span {
+        font-size: 1.5rem;
+    }
+    
+    .experience-badge p {
+        font-size: 0.7rem;
+        margin-top: 0.3rem;
+    }
+}
+
 .about-content {
     display: flex;
     flex-direction: column;
